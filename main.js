@@ -91,7 +91,7 @@ function init() {
           clipPath: "inset(0)",
           duration: 0.75,
           delay: delay + index * 0.04,
-          ease: Elastic.easeOut.config(10, 0.75),
+          ease: Elastic.easeOut.config(3, 0.75),
         },
         "+1"
       );
