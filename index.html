@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ポップでかわいい水族館のサイト | インタラ塾 vol.1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&family=Space+Grotesk:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+      .fv {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .fv-bg-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .fv-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.85);
+      }
+
+      .fv-bg-color01 {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #d9b8f2;
+        width: 100%;
+        height: calc(100vh + 16rem);
+        transform-origin: 50% 0;
+        border-radius: 0 0 16rem;
+        z-index: 2;
+      }
+      .fv-bg-color02 {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #a9f4e9;
+        width: 100%;
+        height: calc(100vh + 16rem);
+        transform-origin: 50% 0;
+        border-radius: 0 0 16rem;
+        z-index: 1;
+      }
+
+      .fv-loading{
+        width: 80px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 3;
+      }
+
+      .fv-loading img{
+        width: 100%;
+        height: auto;
+      }
+
+      .fv-contents {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Space Grotesk", sans-serif;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .fv-contents-title {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12vw;
+        margin-bottom: 0.2em;
+        text-align: center;
+        perspective: 10vw;
+      }
+
+      .fv-contents-title span {
+        display: inline-block;
+        color: #f9c1cf;
+        transition: clip-path 2s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .fv-contents-text {
+        font-family: "Josefin Slab", serif;
+        color: #ffd800;
+        position: relative;
+        top: 0;
+        left: 0;
+        font-weight: 300;
+        font-size: 2vw;
+        line-height: 1.25;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="fv">
+      <div class="fv-bg-wrapper">
+        <img class="fv-bg" src="./bg.jpg" alt="" />
+        <div class="fv-bg-color01"></div>
+        <div class="fv-bg-color02"></div>
+        <div class="fv-loading">
+          <img src="./fish.png" alt="">
+        </div>
+      </div>
+      <div class="fv-contents">
+        <h1 class="fv-contents-title">Look me!</h1>
+        <p class="fv-contents-text">
+          Discover the wonder of the aquatic animal world. Advance timed ticket
+          purchase is required.
+        </p>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="../libs/utils.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
